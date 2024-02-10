@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Task</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+	<script src="index.js"></script>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+		<!-- Page title/header section -->
+		<header id="page-title">
+			<h1>YAY! It's Bogo</h1>
+		</header>
+		<div id="content">
+			<!-- Shopping cart table -->
+			<table id="cart-table">
+				<thead>
+					<!-- Table header row -->
+					<tr>
+						<th class="cart-checkbox"></th>
+						<th class="item-description"></th>
+						<th class="after-discount"></th>
+						<th class="offer-discount"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- Individual product rows -->
+					<tr class="productitm">
+						<!-- Checkbox column -->
+
+						<td id="checkbox1"><input class="qtyinput" type="checkbox"
+								onclick="toggleSubsection('subsection1')"></td>
+						<!-- Product description column -->
+						<td class="pair"><b>1 Unit</b> <span class="hi">10% Off</span> <br><span class="priz">Standard Price</span>
+							<!-- Subsection for additional details -->
+							<div id="subsection1" class="subsection">
+								<table>
+									<tr class="sizecolor">
+										<th></th>
+										<th>Size</th>
+										<th>Colour</th>
+									</tr>
+									<tr>
+										<td>#1</td>
+										<td>
+											<select id="sizeOption1" onchange="updateSize(this.value)">
+												<option value="">Size</option>
+												<option>S</option>
+												<option>M</option>
+												<option>L</option>
+											</select>
+										</td>
+										<td>
+											<select id="colorOption1" onchange="updateColor(this.value)">
+												<option value="">Colour</option>
+												<option>Red</option>
+												<option>Blue</option>
+												<option>Green</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>#2</td>
+										<td>
+											<select id="sizeOption1" onchange="updateSize(this.value)">
+												<option value="">Size</option>
+												<option>S</option>
+												<option>M</option>
+												<option>L</option>
+											</select>
+										</td>
+										<td>
+											<select id="colorOption1" onchange="updateColor(this.value)">
+												<option value="">Colour</option>
+												<option>Red</option>
+												<option>Blue</option>
+												<option>Green</option>
+											</select>
+										</td>
+									</tr>
+
+								</table>
+						</td>
+						
+						<!-- Other columns for the product row -->
+
+						
+						<td class="off"> <b>$10.00 USD</b>
+						<span class="discount">$24.00 USD<br></span></td>
+					</tr>
+
+					
+					<!-- Repeat similar structure for other product rows -->
+					<tr class="productitm">
+						<td id="checkbox2"><input type="checkbox" class="qtyinput" checked="check"
+								onclick="toggleSubsection('subsection2')">
+						</td>
+						<td class=" pair"><b>2 Unit</b><span class="hi">20% Off</span> <br><span class="priz">DKK 345.00</span>
+							<div id="subsection2" class="subsection">
+								<table>
+									<tr class="sizecolor">
+										<th></th>
+										<th>Size</th>
+										<th>Colour</th>
+									</tr>
+									<tr>
+										<td>#1</td>
+										<td>
+											<select id="sizeOption1" onchange="updateSize(this.value)">
+												<option value="">Size</option>
+												<option>S</option>
+												<option>M</option>
+												<option>L</option>
+											</select>
+										</td>
+										<td>
+											<select id="colorOption1" onchange="updateColor(this.value)">
+												<option value="">Colour</option>
+												<option>Red</option>
+												<option>Blue</option>
+												<option>Green</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>#2</td>
+										<td>
+											<select id="sizeOption1" onchange="updateSize(this.value)">
+												<option value="">Size</option>
+												<option>S</option>
+												<option>M</option>
+												<option>L</option>
+											</select>
+										</td>
+										<td>
+											<select id="colorOption1" onchange="updateColor(this.value)">
+												<option value="">Colour</option>
+												<option>Red</option>
+												<option>Blue</option>
+												<option>Green</option>
+											</select>
+										</td>
+									</tr>
+
+								</table>
+							</div>
+						<td class="discount"><br>$24.00</td>
+						<td class="off">$18.00 USD<span class="hi">Most Popular</span></td>
+					</tr>
+					<tr class="productitm">
+						<td id="checkbox3"><input type="checkbox" class="qtyinput"
+								onclick="toggleSubsection('subsection3')"></td>
+						<td class="pair"><b>3 Unit</b><span class="hi">30% Off</span>  <br><span class="priz">$18.00 USD</span>
+							<div id="subsection3" class="subsection" style="display: none;">
+								<table>
+									<tr class="sizecolor">
+										<th></th>
+										<th>Size</th>
+										<th>Colour</th>
+									</tr>
+									<tr>
+										<td>#1</td>
+										<td>
+											<select id="sizeOption1" onchange="updateSize(this.value)">
+												<option value="">Size</option>
+												<option>S</option>
+												<option>M</option>
+												<option>L</option>
+											</select>
+										</td>
+										<td>
+											<select id="colorOption1" onchange="updateColor(this.value)">
+												<option value="">Colour</option>
+												<option>Red</option>
+												<option>Blue</option>
+												<option>Green</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>#2</td>
+										<td>
+											<select id="sizeOption1" onchange="updateSize(this.value)">
+												<option value="">Size</option>
+												<option>S</option>
+												<option>M</option>
+												<option>L</option>
+											</select>
+										</td>
+										<td>
+											<select id="colorOption1" onchange="updateColor(this.value)">
+												<option value="">Colour</option>
+												<option>Red</option>
+												<option>Blue</option>
+												<option>Green</option>
+											</select>
+										</td>
+									</tr>
+
+								</table>
+							</div>
+						</td>
+						<td class="discount"><br></td>
+						<td class="off"><b>$24.00 USD</b><span class="discount">$24.00 USD<br></span></td>
+					</tr>
+
+					<!-- Table footer rows (subtotal, checkout button, etc.) -->
+
+					<tr colspan="2" class="totalprice">
+						<td colspan="2" class="light">Free 2 Day Shipping</td>
+
+						<td colspan="2"><span class="totalPrice">Total:$18.00 USD</span></td>
+					</tr>
+
+					<!-- checkout btn -->
+					<tr class="checkoutrow">
+						<td colspan="4" class="checkout"><button id="submitbtn">+ Add to Cart</button></td>
+					</tr>
+					<tr>
+						<td colspan="4"><span class="copyright">@ Powered by Pumper</span></td>
+					</tr>
+				</tbody>
+
+			</table>
+
+		</div>
+	</div>
+</body>
+
+</html>
